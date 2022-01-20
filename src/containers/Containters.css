@@ -1,15 +1,20 @@
 .nav{
     background-image: url(../img/nav.png);
-    display: flex;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
 }
 
 .container{
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60%;
+    max-width: 50%;
+}
+
+.logo{
+    margin-left: 5%;
+    padding: 2%
 }
 
 .nav-img{
@@ -18,21 +23,52 @@
 
 .card-element{
     border: solid black 2px;
-    width: 18rem;
-    height: 35rem;
+    width: 15rem;
+    height: 30rem;
     margin: auto;
     margin-top: 2%;
     padding: 3px;
+    
 }
 
 .wrapper{
+    
     display: flex;
     margin:auto;
     max-width: 70%;
+    margin-top: 2%;
 }
 
 .card-body{
     display: inline-block;
     margin-top: auto;
+    
+}
+
+.carousel-img{
+    width: 50vw;
+    padding: 1%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.maps{
+    border:0;
+    width: 40vw;
+    height: 30vw;
+    margin:auto
+}
+
+.contact{
+    display: flex;
+
+    
+}
+.contact-detail{
+    margin-right: 4%;
+    display: block;
+    justify-content: center;
+    margin-top: 3%;
+    font-family: Montserrat, sans-serif;
     
 }

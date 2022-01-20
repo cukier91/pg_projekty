@@ -7,18 +7,18 @@ import "./Containters.css";
 export default function Navi() {
 	return (
 		<div className="containter">
-			<div className="nav"></div>
-			<Navbar bg="light" variant="light">
-				<Container>
-					<Navbar.Brand href="/">
+			<Navbar.Brand href="/" className="logo">
 						<img
 							src={PG}
-							width="120px"
-							height="auto"
+							width="130px"
 							className="d-inline-block align-top"
 							alt="React Bootstrap logo"
 						/>
 					</Navbar.Brand>
+			<div className="nav"></div>
+			<Navbar bg="light" variant="light">
+				<Container>
+					
 					<Nav className="me-auto">
 						<Nav.Link href="/">Home</Nav.Link>
 						<Nav.Link href="/shop">Sklep</Nav.Link>
