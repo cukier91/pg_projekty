@@ -2,7 +2,7 @@
     background-image: url(../img/nav.png);
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+  
 }
 
 .container{
@@ -23,11 +23,12 @@
 
 .card-element{
     border: solid black 2px;
-    width: 15rem;
-    height: 30rem;
+    width: 15vw;
+    height: 30vw;
     margin: auto;
     margin-top: 2%;
     padding: 3px;
+   
     
 }
 
@@ -50,6 +51,7 @@
     padding: 1%;
     margin: auto;
     margin-bottom: 1%;
+    
 }
 
 .maps{
@@ -65,10 +67,19 @@
     
 }
 .contact-detail{
-    margin-right: 4%;
+    margin-right: 6%;
     display: block;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 4%;
     font-family: Montserrat, sans-serif;
-    
+    font-weight: 400;   
+}
+
+.form{
+    font-family: Montserrat, sans-serif;
+    display: block;
+    margin:auto;
+    max-width: 40%;
+    margin-top: 2%;
+    font-size: small;
 }
