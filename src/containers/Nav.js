@@ -30,8 +30,8 @@ export default function Navi() {
 							</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.3">Kariera</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">
-								Separated link
+							<NavDropdown.Item href="/admin">
+								Panel administratora
 							</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
