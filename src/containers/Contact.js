@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Containters.css";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 
+
 export default function Contact() {
+
+
 	return (
 		<div className="wrapper">
-            <div className="contact-detail">
-					<h2>Kontakt</h2>
-					<br />
-					<h4>biuro@pgprojekty.pl</h4>
-                    <br/>
-                    <h4>ul. Mosiężna 31/43</h4>
-                    <h4>53-441 Wrocław</h4>
-                    <br/>
-                    <h4>+48 601 840 707</h4>
-                    <br/>
-                    <h4>NIP: 619 190 95 80</h4>
-				</div>
+			<div className="contact-detail">
+				<h2>Kontakt</h2>
+				<br />
+				<h5>biuro@pgprojekty.pl</h5>
+				<br />
+				<h5>ul. Mosiężna 31/43</h5>
+				<h5>53-441 Wrocław</h5>
+				<br />
+				<h5>+48 601 840 707</h5>
+				<br />
+				<h5>NIP: 619 190 95 80</h5>
+			</div>
 			<div className="contact">
 				<iframe
 					className="maps"

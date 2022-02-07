@@ -26,12 +26,12 @@ export default function Navi() {
 						<NavDropdown title="Więcej" id="basic-nav-dropdown">
 							<NavDropdown.Item href="/pricing">Wycena</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.2">
-								Another action
+								Realizacje
 							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.3">Kariera</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">
-								Separated link
+							<NavDropdown.Item href="/admin">
+								Panel administratora
 							</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
