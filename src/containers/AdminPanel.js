@@ -15,12 +15,25 @@ export default function AdminPanel() {
 		img: "",
 	});
 	const [items, setItems] = useState([]);
+	const [productsTable, setProductTable] = useState([])
 	const ref = firebase.firestore().collection("Contact");
 	const refShop = firebase.firestore().collection("Shop");
 
+	function getProductData() {
+		refShop.onSnapshot((querySnapshot) => {
+			const items = [];
+			querySnapshot.forEach((doc) => {
+				items.push(doc.data());
+				console.log(doc.data())
+			});
+			setProductTable(items);
+		
+		});
+	}
+
 	function addProduct(e, product) {
-		e.preventDefault()
-		console.log(product)
+		e.preventDefault();
+		console.log(product);
 		refShop
 			.doc(product.id)
 			.set(product)
@@ -51,10 +64,20 @@ export default function AdminPanel() {
 
 	useEffect(() => {
 		getData();
+		getProductData();
 	}, []);
 
 	function deleteMsg(id) {
 		ref
+			.doc(id)
+			.delete()
+			.catch((err) => {
+				console.log(err);
+			});
+	}
+
+	function deleteProduct(id) {
+		refShop
 			.doc(id)
 			.delete()
 			.catch((err) => {
@@ -70,7 +93,6 @@ export default function AdminPanel() {
 				console.log(err);
 			});
 	}
-
 
 	return (
 		<div className="container">
@@ -165,7 +187,7 @@ export default function AdminPanel() {
 						type="submit"
 						variant="primary"
 						onClick={(e) =>
-							addProduct(e,{
+							addProduct(e, {
 								id: uuidv4(),
 								name: form.name,
 								description: form.description,
@@ -181,6 +203,36 @@ export default function AdminPanel() {
 				<div className="img-overview">
 					<img className="img" src={`${form.img}`} />
 				</div>
+			</div>
+			<div style= {{margin:'auto', marginTop:'3%', marginBottom:'3%'}}>
+				<Table striped bordered hover>
+					<thead>
+						<tr>
+							<th>Nr.</th>
+							<th>IMG</th>
+							<th>Nazwa</th>
+							<th>Opis</th>
+							<th>Cena</th>
+							<th>#</th>
+						</tr>
+					</thead>
+					<tbody>
+						{productsTable.map(({id, description, img, name, price}, counter=0) => {
+							counter ++
+							return(
+								<tr key={id}>
+									<td>{counter}</td>
+									<td><img src={`${img}`} className="img-admin"></img></td>
+									<td>{name}</td>
+									<td>{description}</td>
+									<td>{price}</td>
+									<td><Button onClick={() => deleteProduct(id)}>Usuń</Button></td>
+
+								</tr>
+							)
+						})}
+					</tbody>
+				</Table>
 			</div>
 		</div>
 	);
