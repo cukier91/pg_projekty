@@ -1,5 +1,4 @@
 .nav {
-	background-image: url(../img/nav.png);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -120,5 +119,50 @@
 
 .img-admin{
 	width: 5rem;
+	
+}
+
+.path{
+border-bottom: solid 1px black;
+color: black;
+}
+
+.no-path{
+	color: black;
+}
+
+.shop-list{
+	max-width:50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 2%;
+}
+
+.shop-item{
+	width: 40em;
+}
+
+.shop-img{
+	width: 10em;
+	margin:auto;
+}
+
+.shop-container{
+	height: 12em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+
+}
+
+.shop-items{
+	height: 3em;
+	text-align: left;
+}
+
+.shop-button{
+	width: 4%;
+	margin-left: 1%;
 	
 }

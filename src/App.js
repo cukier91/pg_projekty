@@ -9,6 +9,7 @@ import ShopList from "./containers/ShopList";
 import Pricing from "./containers/Pricing";
 import Contact from "./containers/Contact";
 import AdminPanel from "./containers/AdminPanel";
+import SignUp from "./containers/SignUp";
 
 
 
@@ -22,6 +23,7 @@ function App() {
 				<Route path="pricing" element={<Pricing/>}/>
 				<Route path="contact" element={<Contact/>}/>
 				<Route path="admin" element={<AdminPanel/>}/>
+				<Route path="signup" element={<SignUp/>}/>
 			</Routes>
 		</Routers>
 	);
