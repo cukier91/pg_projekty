@@ -34,7 +34,7 @@
 	margin: auto;
 	max-width: 70%;
 	margin-top: 2%;
-	margin-bottom: 10%;
+	margin-bottom: 2%;
 }
 
 .card-body {
@@ -85,8 +85,8 @@
 	display: block;
 	margin: auto;
 	max-width: 40%;
-	margin-top: 2%;
 	font-size: small;
+	margin-bottom: 3%;
 
 }
 
@@ -164,5 +164,10 @@ color: black;
 .shop-button{
 	width: 4%;
 	margin-left: 1%;
+	
+}
+
+.img-basket{
+	width: 3rem;
 	
 }

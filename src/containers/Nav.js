@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PG from "../img/Pg.jpg";
 import "./Containters.css";
 import shoppingCart from "../img/shoppingCart.png";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Navi() {
 	const [path, setPath] = useState(window.location.pathname);
-	console.log(path);
+	const products = useSelector((state) => state.allProducts.products);
+
 	return (
 		<div className="containter">
 			<Navbar.Brand href="/" className="logo">
@@ -37,12 +39,7 @@ export default function Navi() {
 					>
 						Kontakt
 					</Nav.Link>
-					<Nav.Link
-						href="/pricing"
-						className={path === "/pricing" ? "path" : "no-path"}
-					>
-						Wycena
-					</Nav.Link>
+
 					<Navbar.Collapse id="navbar-dark-example">
 						<Nav>
 							<NavDropdown
@@ -50,9 +47,7 @@ export default function Navi() {
 								title="Więcej"
 								menuVariant="dark"
 							>
-								<NavDropdown.Item href="/signup">
-									Utwórz konto
-								</NavDropdown.Item>
+								<NavDropdown.Item href="/signup">Utwórz konto</NavDropdown.Item>
 								<NavDropdown.Item href="#action/3.3">Kariera</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href="/admin">
@@ -60,11 +55,35 @@ export default function Navi() {
 								</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
-						<img src={shoppingCart} style={{ width: "8%", marginLeft:'100%'}} />
-						<div style={{height:'1px', color:'black', fontWeight:'500'}}>4</div>
+						<Link to="/basket" >
+							<img
+								src={shoppingCart}
+								style={{ width: "10%", marginLeft: "100%" }}
+								
+							/>
+						</Link>
+						<div
+							style={{
+								display:products.length===0?"none":"",
+								height: "25px",
+								width: "25px",
+								color: "black",
+								fontWeight: "500",
+								marginLeft: "5%",
+								marginTop:'4%',
+								background: "grey",
+								borderRadius: "50%",
+								textAlign: "center",
+								color: "white",
+								fontSize: "80%",
+								fontFamily: "Montserrat",
+								fontWeight: "700",
+							}}
+						>
+							{products.length}
+						</div>
 					</Navbar.Collapse>
 				</div>
-				
 			</Navbar>
 		</div>
 	);

@@ -5,8 +5,13 @@ import firebase from "../firebase";
 import heart from "../img/heart.png";
 import basket from "../img/backet.png";
 
+import { useDispatch } from "react-redux";
+import { AddProduct } from "../redux/actions/productActions";
+
 export default function ShopList() {
+	const dispatch = useDispatch()
 	const [items, setItems] = useState([]);
+
 
 	function getData() {
 		const ref = firebase.firestore().collection("Shop");
@@ -25,7 +30,11 @@ export default function ShopList() {
 		getData();
 	}, []);
 
-	console.log(items);
+
+	function addToBasket(e, product){
+		e.preventDefault()
+		dispatch(AddProduct(product))
+	}
 
 	return (
 		<div className="shop-list">
@@ -66,7 +75,7 @@ export default function ShopList() {
 								{price} zł
 							</ListGroup.Item>
 							<ListGroup.Item className="shop-items">
-								<img className="shop-button" src={basket} type="button" />
+								<img className="shop-button" src={basket} type="button" onClick={(e) => {addToBasket(e,{id:id, img:img, name:name, price:price, quantity:1})}}/>
 								<img className="shop-button" src={heart} type="button" />
 							</ListGroup.Item>
 						</ListGroup>
