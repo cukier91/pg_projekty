@@ -1,5 +1,4 @@
 .nav {
-	background-image: url(../img/nav.png);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -35,7 +34,7 @@
 	margin: auto;
 	max-width: 70%;
 	margin-top: 2%;
-	margin-bottom: 10%;
+	margin-bottom: 2%;
 }
 
 .card-body {
@@ -73,13 +72,24 @@
 	font-family: Montserrat, sans-serif;
 	display: block;
 	margin: auto;
-	max-width: 40%;
+	max-width: 50%;
 	margin-top: 2%;
 	font-size: small;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 }
+
+.form-pricing {
+	font-family: Montserrat, sans-serif;
+	display: block;
+	margin: auto;
+	max-width: 40%;
+	font-size: small;
+	margin-bottom: 3%;
+
+}
+
 
 .bold {
 	font-weight: bold;
@@ -101,8 +111,63 @@
 
 .img{
 	max-width: 19rem;
-	max-width: 19rem;
+	max-height: 19rem;
 	margin:auto;
 	margin-top: 5%;
+	
+}
+
+.img-admin{
+	width: 5rem;
+	
+}
+
+.path{
+border-bottom: solid 1px black;
+color: black;
+}
+
+.no-path{
+	color: black;
+}
+
+.shop-list{
+	max-width:50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 2%;
+}
+
+.shop-item{
+	width: 40em;
+}
+
+.shop-img{
+	width: 10em;
+	margin:auto;
+}
+
+.shop-container{
+	height: 12em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+
+}
+
+.shop-items{
+	height: 3em;
+	text-align: left;
+}
+
+.shop-button{
+	width: 4%;
+	margin-left: 1%;
+	
+}
+
+.img-basket{
+	width: 3rem;
 	
 }

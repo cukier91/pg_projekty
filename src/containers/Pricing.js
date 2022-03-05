@@ -26,15 +26,15 @@ export default function Pricing() {
 	}
 
 	return (
-		<div className="form">
+		<div className="form-pricing">
 			<div>
-				<h3 style={{ marginBottom: "4%" }}>Masz pytanie? </h3>
 				<Alert style={{ display: display }} variant="info">
 					Dziękujęmy za wiadomość
 				</Alert>
 			</div>
 
 			<Form>
+			<h3 style={{ marginBottom: "4%" }}>Masz pytanie? </h3>
 				<Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
 					<Form.Label>Adres e-mail</Form.Label>
 					<Form.Control
